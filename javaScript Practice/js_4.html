@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Student Registration Form</title>
+</head>
+
+<body>
+<h1>Student Registration</h1>
+<script>
+function display()
+{
+var firstname=document.getElementById("fname").value;
+var lastname=document.getElementById("lname").value;
+var age=document.getElementById("age").value;
+var r1=document.getElementById("r1").value;
+var r2=document.getElementById("r2").value;
+
+if (document.getElementById('r1').checked) {
+  info = document.getElementById('r1').value;
+}
+if (document.getElementById('r2').checked) {
+  info = document.getElementById('r2').value;
+}
+document.getElementById("para").innerHTML=firstname+"<br>"+lastname+"<br>"+age+"<br>"+info; 
+}
+</script>
+
+<form>
+<table>
+<tr>
+<td>First Name:</td>
+<td><input type="text" id="fname" placeholder="First Name" required>
+</tr>
+<tr>
+<td>Last Name:</td>
+<td><input type="text" id="lname" placeholder="Last Name" required>
+</tr>
+<tr>
+<td>Enter Age:</td>
+<td><input type="text" id="age" placeholder="Age" required>
+</tr>
+<tr>
+<td>Degree:</td>
+<td><input type="radio" id="r1" value="MSc.">MSc.
+<input type="radio" id="r2" value="MBA">MBA</td>
+</tr>
+<tr>
+<td><input type="button" value="Submit" onclick="display()">
+</tr>
+</table>
+</form>
+<p id="para"></p>
+</body>
+</html>

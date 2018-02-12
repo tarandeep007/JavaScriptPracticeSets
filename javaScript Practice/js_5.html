@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Event Handling</title>
+</head>
+<body>
+<h1>Swastik Soft Drinks</h1>
+<h2>215, Housr Main Road, Kormanhala, Banglore</h2>
+<h3>Select Type Of Drinks</h3>
+<select id="mySelect" onchange="change()">
+  <option value="Coke">Coke
+  <option value="LemonTea">Lemon Tea
+  <option value="ColdCoffee">Cold Coffee
+</select>
+<input type="textbox" id="val">
+
+<script>
+function change()
+{
+var y;
+var x=document.getElementById("mySelect").value;
+if(x=="Coke")
+{
+y=35;
+document.getElementById("val").value=y;
+}
+if(x=="ColdCoffee")
+{
+y=50;
+document.getElementById("val").value=y;
+}
+if(x=="LemonTea")
+{
+y=30;
+document.getElementById("val").value=y;
+}
+}
+</script>
+</body>
+</html>

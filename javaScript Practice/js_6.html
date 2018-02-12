@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Check Year</title>
+
+<script>
+function check()
+{
+var x=document.getElementById("year").value;
+
+if(x%4==0 && x%100!=0 || x%400==0)
+document.getElementById("para").innerHTML="Leap Year";
+else
+document.getElementById("para").innerHTML="Not Leap";
+
+}
+</script>
+
+</head>
+<body>
+<h1>Year Prediction</h1>
+Enter Year: <input type="text" id="year"><br>
+<input type="button" value="Check" onclick="check()">
+<p id="para"></p>
+
+</body>
+</html>
